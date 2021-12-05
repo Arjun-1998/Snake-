@@ -68,10 +68,14 @@ namespace SnakeAndLadder
             }
             Console.WriteLine("Player Position: {0}", playerPosition);
         }
-        private bool CheckWinner() 
+        private bool CheckWinner()
         {
-            if (playerPosition >= 100) 
+            if (playerPosition >= 100)
             {
+                playerPosition = playerPosition - DieRolled;
+            }
+            if (playerPosition == 100) 
+            { 
                 Console.WriteLine("Player Won");
                 return true;
             }
